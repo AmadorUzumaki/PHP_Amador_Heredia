@@ -8,7 +8,9 @@ $multiple=fullNameSplit($nom);
 foreach ($multiple as $value) {
   echo "$value<br>";
 }
+
 echo "<br>";
+
 $password="Paco";
 function encryptPasswd($password){
  return password_hash($password, PASSWORD_DEFAULT);
