@@ -15,5 +15,6 @@ $password="Paco";
 function encryptPasswd($password){
  return password_hash($password, PASSWORD_DEFAULT);
 }
-echo encryptPasswd($password);
+$passwd_hash=encryptPasswd($password);
+echo $passwd_hash;
 ?>
