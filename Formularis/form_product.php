@@ -1,4 +1,5 @@
 <?php
+//viusi corrections - see comments below amd rubric in moodle
 //Variables definition
 $name=$capitalisedName=$price=$discount=$discountQuantity=$finalPrice=$replacedMessage=null;
 
@@ -9,6 +10,7 @@ if ($_POST){
   //name format
   $name=$_POST['name'];
   //if the $name variable has been initialised and is not null
+  //visusi corrections - falta isset
   if(($name))
      $capitalisedName = nameToCapitalLetters($name);
   //price value
@@ -18,13 +20,14 @@ if ($_POST){
     $discount = $option;
 }
   //discountQuantity
-  $discountQuantity=$price-$discount;
+  $discountQuantity=$price-$discount;//visusi corrections: calculation to be done inside the function only. It's has been duplicated
   //if $discount and $price have been initialised and are not null
   if(isset($discount)&&isset($price)){
     $finalPrice=discountCalculation($discount, $price);
   }
   //message replacement
   //if $finalPrice is false using !
+  //visusi corrections - way around - correct answer - if(!$finalPrice)
   if($finalPrice!=true)
     $replacedMessage="Discount cannot be greater than price";
   else

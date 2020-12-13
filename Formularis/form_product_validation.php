@@ -17,7 +17,7 @@ function discountCalculation($discount,$price){
   if($discountCalculation<0)
     return false;
   else
-    return true;
+    return true;//visusi corrections - it should be return $discountCalculation=
 }
 
 function nameToCapitalLetters($name){
