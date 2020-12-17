@@ -1,4 +1,5 @@
 <?php
+//viusi corrections - see comments below amd rubric in moodle
 //Definició de variable i assignació de valor null
 $finalPrice=$partialPrice2=$partialPrice=$viewsPrice=$genderPrice=$typePrice=$foodServices=$views=$gender=$type=null;
 
@@ -26,7 +27,7 @@ if ($_GET){
   }
   //Si la variable $gender ha sigut inicialitzada i no es null
   //calcular del preu del genere de l'habitació
-  if (isset($gender) and $gender!=null){
+  if (isset($gender) and $gender!=null){//visusi corrections - isset ja comprova que no siga null
     $genderPrice=genderPriceCalculation($gender);
   }
 
@@ -109,7 +110,7 @@ if ($_GET){
 
     <?php
     //Si s'ha calculat el preu, es a dir si $finalPrice no es null i té un valor
-    if ($finalPrice!=null){
+    if ($finalPrice!=null){ //visusi corrections - falta isset
         //Mostrar el missatge amb el preu total
         echo $finalPrice;
     }
